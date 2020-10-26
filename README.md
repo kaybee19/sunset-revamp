@@ -4,8 +4,6 @@
   Sunset Drive - Revamp
 </h1>
 
----
-
 A custom website based on image-centric theme for Gatsby.
 
 **Based on [London](https://github.com/ImedAdel/gatsby-london) for Gatsby**
