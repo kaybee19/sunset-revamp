@@ -4,21 +4,18 @@ import poster2 from '../images/poster2.png';
 
 export default function(props) {
 
-  const [image, setImage] = useState(null);
+	const [width, setWidth] = useState(null);
 
-  useEffect(() => {
-	  const [width, setWidth] = useState(window.innerWidth);
-  	const breakpoint = 620;
+	const breakpoint = 620;
 
+	useEffect(() => {
 		const handleWindowResize = () => setWidth(window.innerWidth);
 		window.addEventListener("resize", handleWindowResize);
 
-		return () => window.removeEventListener("resize", handleWindowResize);
-
-    setImage(width > breakpoint ? posters : poster2)
-
-  }, []);
+		return () => window.removeEventListener("resize", handleWindowResize)
+	})
 	
+	const image = width > breakpoint ? posters : poster2;
    
   return (
     <div className="jumboRow">
