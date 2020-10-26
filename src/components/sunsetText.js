@@ -11,10 +11,11 @@ export default function(props) {
 		const handleWindowResize = () => setWidth(window.innerWidth);
 		window.addEventListener("resize", handleWindowResize);
 
-		return () => window.removeEventListener("resize", handleWindowResize)
+		return () => window.removeEventListener("resize", handleWindowResize);
+
+	  const image = width > breakpoint ? posters : poster2;
   }, []);
 	
-	const image = width > breakpoint ? posters : poster2;
    
   return (
     <div className="jumboRow">
