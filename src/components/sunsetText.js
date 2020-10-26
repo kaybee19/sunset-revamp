@@ -8,12 +8,12 @@ export default function(props) {
 
 	const breakpoint = 620;
 
-	useEffect(() => {
+  useEffect(() => {
 		const handleWindowResize = () => setWidth(window.innerWidth);
 		window.addEventListener("resize", handleWindowResize);
 
 		return () => window.removeEventListener("resize", handleWindowResize)
-	})
+  }, []);
 	
 	const image = width > breakpoint ? posters : poster2;
    
