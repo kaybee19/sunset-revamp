@@ -41,7 +41,7 @@ const Layout = props => {
     if (page === 'home') {
       titleHome.classList.add('hideTitle');
     };
-
+   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -50,7 +50,7 @@ const Layout = props => {
         <div className="site-head-container">
           <a
             className="nav-burger"
-            href='#'
+            href="/#"
             onClick={() => {
               setToggleNav(!toggleNav);
               bgNav();

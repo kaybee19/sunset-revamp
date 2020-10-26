@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "gatsby"
 import HrLine from "../components/hrLine"
-import posters from '../images/posters.png'
 import { logo1, logo2, logo3, logo4, logo5, logo6 } from "../images/logos"
 
 export default class sunsetScreening extends Component {

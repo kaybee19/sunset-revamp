@@ -25,22 +25,22 @@ export default class Footer extends React.Component {
 				<div className="iconClass">
 					<ul>
 						<li>
-							<a target="_blank" href="https://www.facebook.com/sunsetdriveng/">
+							<a target="_blank" href="https://www.facebook.com/sunsetdriveng/" rel="noopener noreferrer">
 								<FontAwesomeIcon icon={faFacebookF} size="lg" />
 							</a>
 						</li>
 						<li>
-							<a target="_blank" href="https://www.linkedin.com/company/sunset-drivein/">
+							<a target="_blank" href="https://www.linkedin.com/company/sunset-drivein/" rel="noopener noreferrer">
 								<FontAwesomeIcon icon={faLinkedinIn} size="lg" />
 							</a>
 						</li>
 						<li>
-							<a target="_blank" href="https://www.instagram.com/sunsetdriveng/">
+							<a target="_blank" href="https://www.instagram.com/sunsetdriveng/" rel="noopener noreferrer">
 								<FontAwesomeIcon icon={faInstagram} size="lg" />
 							</a>
 						</li>
 						<li>
-							<a target="_blank" href="https://twitter.com/sunsetdriveng">
+							<a target="_blank" href="https://twitter.com/sunsetdriveng" rel="noopener noreferrer">
 								<FontAwesomeIcon icon={faTwitter} size="lg" />
 							</a>
 						</li>

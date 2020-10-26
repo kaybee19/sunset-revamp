@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React from "react";
 import { bg1, bg2, bg3, bg4, bg5, bg6, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12 } from "../images/posters"
 
 export default function(props) {
@@ -32,12 +32,12 @@ export default function(props) {
           }}>
             <div className="posterClass posterItem1" style={{ transform: 'rotateY(0deg)' }}>
               <img src={poster.backg1} alt="movie-poster" className="posterBImg" />
-              <img src={poster.img1} alt="movie-image" className="posterImg" />
+              <img src={poster.img1} alt="movie" className="posterImg" />
               <h2 className="posterText">{poster.text1}</h2>
             </div>
             <div className="posterClass posterItem2">
               <img src={poster.backg2} alt="movie-poster" className="posterBImg posterImg2" />
-              <img src={poster.img2} alt="movie-image" className="posterImg posterImg2" />
+              <img src={poster.img2} alt="movie" className="posterImg posterImg2" />
               <h2 className="posterText">{poster.text2}</h2>
             </div>
           </div>

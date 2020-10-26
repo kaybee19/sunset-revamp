@@ -29,7 +29,7 @@ export default function(props) {
         </p>
       </div>
       <div className="col-6 colFix">
-        <img src={image} className="sunsetImg" alt="poster-image"/>
+        <img src={image} className="sunsetImg" alt="poster"/>
       </div>
     </div>
   );
