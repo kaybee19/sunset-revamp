@@ -1,34 +1,14 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="80" />
-  </a>
-</p>
 
 <h1 align="center">
-  London After Midnight
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/vaporwavy/gatsby-london-after-midnight)
-
+  Sunset Drive - Revamp
 </h1>
 
----
-
-A custom, image-centric theme for Gatsby. Made for publishers and portfolios with plenty of graphics to show off to the world. Completely free and fully responsive, released under the MIT license.
+A custom website based on image-centric theme for Gatsby.
 
 **Based on [London](https://github.com/ImedAdel/gatsby-london) for Gatsby**
 
 **Demo: https://gatsby-lam.vaporwavy.io**
-
----
-
-### What is different from London?
-* Support Tag
-* Full Recoloring for Dark themes
-* Highlight Syntax with Prism.js
-* Support Korean and Japanese
-* Parameterize All Colors
-* Change the Format of Thumbnailless Postcards
 
 ---
 
