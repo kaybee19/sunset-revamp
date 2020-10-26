@@ -5,6 +5,7 @@ module.exports = {
   siteMetadata: {
     title: siteConfig.name,
     author: siteConfig.author,
+    sub: siteConfig.sub,
     description: siteConfig.description,
     siteUrl: urljoin(siteConfig.url, siteConfig.prefix),
     social: {

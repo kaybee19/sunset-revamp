@@ -1,7 +1,8 @@
 module.exports = {
-  name: 'London After Midnight',
+  name: 'Sunset Drive',
   shortName: 'LAM',
-  description: 'A bold, minimal theme for Gatsby, focused on clean typography & beautiful imagery',
+  description: 'Bringing the vintage magic of the big screen to the outdoors',
+  sub: 'The best open air movie experience in Nigeria',
   url: 'https://gatsby-lam.vaporwavy.io', // Domain of your site without prefix!
   prefix: '/',
   author: 'Vaporwavy',

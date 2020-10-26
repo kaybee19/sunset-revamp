@@ -50,7 +50,7 @@ body {
 /* ---------------------------------------------------------- */
 
 .site-wrapper {
-  padding: 3vw;
+  padding: 3vw 3vw 0vw;
   min-height: 100vh;
 }
 @media (max-width: 850px) {
@@ -69,6 +69,12 @@ body {
   margin: auto;
   text-align: center;
 }
+@media (max-width: 500px) {
+  .page-head {
+    padding: 40vw 0 20vw;
+  }
+}
+
 
 .error-head {
   height: 75vh;
@@ -97,12 +103,19 @@ body {
 
 .page-head-title {
   margin: 0;
-  font-size: 4.2rem;
+  padding: 0 20%;
+  font-size: 5rem;
   color: var(--color-base);
 }
 @media (max-width: 500px) {
   .page-head-title {
-    font-size: 2rem;
+    font-size: 3rem;
+    padding: 0rem;
+  }
+}
+@media (min-width: 501px) and (max-width: 900px) {
+  .page-head-title {
+    font-size: 3rem;
   }
 }
 
@@ -119,7 +132,8 @@ body {
 }
 
 .site-foot {
-  margin: 3vw 0 1vw;
+  margin: 3vw 2rem 1vw;
+  right: 0;
   text-align: center;
   color: color(var(--color-border) l(-20%));
   font-size: 1.4rem;
@@ -156,7 +170,7 @@ body {
 
 .nav {
   display: flex;
-  margin: 0 0 0 -12px;
+  /*margin: 0 0 0 -12px;*/
   padding: 0;
   list-style: none;
 }
@@ -552,7 +566,7 @@ body {
 /* ---------------------------------------------------------- */
 
 .post-content {
-  max-width: 720px;
+  max-width: 920px;
   margin: 0 auto;
   padding: 6vw 0;
 }
@@ -594,6 +608,7 @@ body {
 }
 
 .post-content-body {
+  text-align: center;
   font-size: 1.9rem;
   line-height: 1.65em;
 }
@@ -610,6 +625,12 @@ body {
 .post-content-body h5,
 .post-content-body h6 {
   color: var(--color-base);
+}
+
+@media (min-width: 640px) and (max-width: 900px) {
+	.post-content-body h2 {
+		font-size: 3rem
+	}
 }
 
 .post-content-body li {

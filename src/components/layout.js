@@ -1,17 +1,60 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { Fragment, useEffect, useState } from "react";
+import { Link } from "gatsby";
+// import Loader from "./loader"
+
+// Home
+import SunsetIntro from "./sunsetIntro";
+import SunsetFooter from "./Footer";
+
+//About
+
+//Contact
 
 const Layout = props => {
-  const { title, children } = props
-  const [toggleNav, setToggleNav] = React.useState(false)
+  const { title, children, page } = props;
+  const [toggleNav, setToggleNav] = useState(false);
+
+  const homeMarkup = (
+    <Fragment>
+      <SunsetIntro />
+    </Fragment>
+    );
+
+  const footerMarkup = toggleNav ? null : <SunsetFooter />
+
+  const bgNav = () => {
+
+    const bgHome = document.getElementById("heroCont");
+
+    if (page === 'home') {
+      if (!toggleNav) { 
+        bgHome.classList.add('heroFix');
+      } else {
+        bgHome.classList.remove('heroFix');
+      }
+    }
+  }
+
+  useEffect(() => {
+    const titleHome = document.getElementById("titleHome");
+
+    if (page === 'home') {
+      titleHome.classList.add('hideTitle');
+    };
+
+  }, []);
+
   return (
     <div className={`site-wrapper ${toggleNav ? `site-head-open` : ``}`}>
       <header className="site-head">
         <div className="site-head-container">
           <a
             className="nav-burger"
-            href={`#`}
-            onClick={() => setToggleNav(!toggleNav)}
+            href='#'
+            onClick={() => {
+              setToggleNav(!toggleNav);
+              bgNav();
+            }}
           >
             <div
               className="hamburger hamburger--collapse"
@@ -24,31 +67,30 @@ const Layout = props => {
               </div>
             </div>
           </a>
-          <nav id="swup" class="site-head-left">
+          <nav id="swup" className="site-head-left">
             <ul className="nav" role="menu">
-              {/* <li className="nav-home nav-current" role="menuitem">
+              <li role="menuitem">
                 <Link to={`/`}>Home</Link>
-              </li> */}
-              <li className="nav-about" role="menuitem">
+              </li>
+              <li role="menuitem">
                 <Link to={`/about`}>About</Link>
               </li>
-              <li className="nav-elements" role="menuitem">
-                <Link to={`/elements`}>Elements</Link>
-              </li>
-              <li className="nav-tags" role="menuitem">
-                <Link to={`/tags`}>Tags</Link>
+              <li role="menuitem">
+                <Link to={`/contact`}>Contact</Link>
               </li>
             </ul>
           </nav>
-          <div className="site-head-center">
-            <Link className="site-head-logo" to={`/`}>
+
+          <div id="titleHome" className="site-head-center">
+            <div className="titleFont site-head-logo">
               {title}
-            </Link>
+            </div>
           </div>
+
           <div className="site-head-right">
             <div className="social-links">
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/sunsetdriveng/"
                 title="Facebook"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -56,48 +98,37 @@ const Layout = props => {
                 Facebook
               </a>
               <a
-                href="https://twitter.com"
+                href="https://www.instagram.com/sunsetdriveng/"
+                title="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://twitter.com/sunsetdriveng"
                 title="Twitter"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Twitter
               </a>
-              <Link
-                to={`/rss.xml`}
-                title="RSS"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                RSS
-              </Link>
-              <a
-                href="https://github.com/vaporwavy/gatsby-london-after-midnight"
-                title="GitHub"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
             </div>
           </div>
         </div>
       </header>
+
+      {(page === 'home') && homeMarkup}
+
+
       <main id="site-main" className="site-main">
         <div id="swup" className="transition-fade">
           {children}
         </div>
       </main>
       <footer className="site-foot">
-        &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link> &mdash;
-        Built with{" "}
-        <a
-          href="https://gatsbyjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Gatsby
-        </a>
+        {footerMarkup}
+        &copy; {new Date().getFullYear()} {title} Entertainment Services
       </footer>
     </div>
   )

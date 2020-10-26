@@ -1,9 +1,12 @@
 import React from "react"
-import { graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+import SunsetPosters from "../components/sunsetPosters"
+import SunsetServices from "../components/sunsetServices"
 
 import "../utils/normalize.css"
 import "../utils/css/screen.css"
@@ -13,15 +16,28 @@ const AboutPage = ({ data }, location) => {
 
   return (
     <Layout title={siteTitle}>
-      <SEO title="About" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO title="About" />
 
       <article className="post-content page-template no-image">
+        <div className="post-content-body">
+          <h2>
+            Sunset drive is lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </h2>
+          <Link to="/contact#faq"><button className="sunsetButton">View F.A.Q</button></Link>
+        </div>
+      </article>
+
+      <SunsetServices />
+
+      <SunsetPosters />
+
+
+{/*      <article className="post-content page-template no-image">
         <div className="post-content-body">
           <h2 id="clean-minimal-and-deeply-customisable-london-is-a-theme-made-for-people-who-appreciate-simple-lines-">
             Clean, minimal, and deeply customisable. London is a theme made for
             people who appreciate simple lines.
           </h2>
-          <figure className="kg-card kg-image-card kg-width-full">
             <Img
               fluid={data.benchAccounting.childImageSharp.fluid}
               className="kg-image"
@@ -50,7 +66,7 @@ const AboutPage = ({ data }, location) => {
             for more ways to integrate Ghost with your favourite services.
           </p>
         </div>
-      </article>
+      </article>*/}
     </Layout>
   )
 }
