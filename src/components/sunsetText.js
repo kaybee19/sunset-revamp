@@ -4,11 +4,10 @@ import poster2 from '../images/poster2.png';
 
 export default function(props) {
 
-	const [width, setWidth] = useState(window.innerWidth);
-
-	const breakpoint = 620;
-
   useEffect(() => {
+	  const [width, setWidth] = useState(window.innerWidth);
+  	const breakpoint = 620;
+
 		const handleWindowResize = () => setWidth(window.innerWidth);
 		window.addEventListener("resize", handleWindowResize);
 
