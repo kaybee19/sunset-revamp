@@ -4,7 +4,7 @@ import poster2 from '../images/poster2.png';
 
 export default function(props) {
 
-	const [width, setWidth] = useState(width);
+	const [width, setWidth] = useState(null);
 
 	const breakpoint = 620;
 
