@@ -6,7 +6,7 @@ export default class sunsetFAQ extends React.Component {
 	render() {
 
 		const address = <a
-                href="https://www.google.com/maps/place/The+Pavilion+Restaurant/@9.0538793,7.5268466,19z"
+                href="https://www.google.com/maps/place/Retro+Africa/@9.0538793,7.5268466,19z/data=!4m8!1m2!3m1!2sThe+Pavilion+Restaurant!3m4!1s0x0:0xa2816ee40c020fba!8m2!3d9.0541956!4d7.5267439"
                 title="Pavillion"
                 target="_blank"
                 rel="noopener noreferrer"
